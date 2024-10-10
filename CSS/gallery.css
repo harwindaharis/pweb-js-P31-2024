@@ -1,0 +1,55 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f8e9c2;
+    margin: 0;
+    padding: 0;
+}
+
+.instagram-post {
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 150px;
+}
+
+.instagram-post h1 {
+    font-size: 50px;
+    color: #3b1c0c;
+    text-shadow: 2px 2px #f7a918;
+    margin-bottom: 10px;
+}
+
+.instagram-post p {
+    font-size: 18px;
+    font-style: italic;
+    color: #3b1c0c;
+    margin: 5px auto;
+    max-width: 600px;
+}
+
+.post-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 40px 0;
+}
+
+.post img {
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 300px;
+}
+
+.post {
+    flex: 1;
+    max-width: 300px;
+    height: auto;
+}
+
+@media screen and (max-width: 768px) {
+    .post-container {
+        flex-direction: column;
+    }
+}
