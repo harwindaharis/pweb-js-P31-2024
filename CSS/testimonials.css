@@ -8,7 +8,7 @@ body {
 .customer-says {
     text-align: center;
     padding: 20px 0;
-    margin-top: 150px;
+    margin-top: 100px;
 }
 
 .customer-says h1 {
@@ -40,6 +40,12 @@ body {
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
     width: 300px;
     text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.review-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .rating {

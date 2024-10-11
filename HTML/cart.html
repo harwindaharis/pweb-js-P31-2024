@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>It'slay</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Galada&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="CSS/cart.css">
+</head>
+<body>
+    <section id="hero" class="Herosec">
+        <nav>
+            <div class="navbar">
+                <div class="cart-icon" onclick="toggleCart()">
+                    <img src="image/cart.png" alt="Cart">
+                    <span class="cart-count">0</span> <!-- Display item count -->
+                </div>
+            </div>    
+        </nav>
+        
+        <!-- Cart Modal -->
+        <div class="cart-modal" id="cart-modal">
+            <div class="cart-header">
+                <h2>Your Cart</h2>
+                <span class="close-cart" onclick="toggleCart()">&times;</span>
+            </div>
+            <div class="cart-items" id="cart-items"></div>
+            <div class="cart-footer">
+                <p>Total: <span id="cart-total">0</span></p>
+                <button class="button" onclick="checkout()">Checkout</button>
+            </div>
+        </div>        
+    </section>
+
+    <script src="JS/cart.js"></script>
+
+</body>
+</html>

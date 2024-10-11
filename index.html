@@ -4,10 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>It'slay</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Galada&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="CSS/gallery.css">
     <link rel="stylesheet" href="CSS/testimonials.css">
+    <link rel="stylesheet" href="CSS/cart.css">
+    <script src="script.js"></script> 
 </head>
 <body>
     <section id="hero" class="Herosec">
@@ -17,12 +20,28 @@
                 <ul class="nav-links">
                     <li><a href="#hero">Home</a></li>
                     <li><a href="#about">About</a></li>
-                    <li><a href="#catalog">Menu</a></li>
+                    <li><a href="#catalog">Catalog</a></li>
                     <li><a href="#gallery">Gallery</a></li>
                     <li><a href="#testimonials">Testimonials</a></li>
                 </ul>
+                <div  class="cart-icon" onclick="toggleCart()">
+                    <img src="image/cart.png" alt="Cart">
+                    <span id="cart-icon" class="cart-count">0</span> <!-- Display item count -->
+                </div>
                 <div class="hamburger" onclick="toggleSidebar()">&#9776;</div>
             </div>
+            <div class="cart-modal" id="cart-modal">
+                <div class="cart-header">
+                    <h2>Your Cart</h2>
+                    <span class="close-cart" onclick="toggleCart()">&times;</span>
+                </div>
+                <div class="cart-items" id="cart-items"></div>
+                <div class="cart-footer">
+                    <p>Total Items: <span id="cart-total-items">0</span></p>
+                    <p>Total: <span id="cart-total">0</span></p>
+                    <button class="button-cte" onclick="checkout()">Checkout</button>
+                </div>
+            </div>    
             <div class="mobile-sidebar">
                 <span class="close-btn" onclick="closeSidebar()">&times;</span>
                 <ul>
@@ -45,66 +64,64 @@
     </section>
     <section id="about" class="about">
         <div class="about-text">
-            <h1>Our Burgers,<br> Made with Love</h1>
-            <p>At Burger Eat, we believe a great burger starts with the finest ingredients. Each burger is crafted with premium meats, fresh vegetables, and our special blend of sauces. Every bite is an explosion of flavor, designed to satisfy your cravings</p>
+            <h1>Where Beauty,<br>Meets Comfort</h1>
+            <p>At Your's Need, we believe that true beauty starts from within—and extends into the spaces we live in. That's why we curate the finest beauty products and elegant furniture pieces to help you look your best and feel at home. Whether you're enhancing your personal style or transforming your living space, we provide everything you need to express yourself beautifully</p>
             </div>
-            <img src="image/kuning2.png" class="kuning2">
-            <img src="image/daun1.png" class="daun1">
-            <img src="image/daun2.png" class="daun2">
-            <img src="image/daun3.png" class="daun3">
-            <img src="image/daun4.png" class="daun4">
-            <img src="image/daun5.png" class="daun5">
-            <img src="image/Burgers.png" class="burger2">
     </section>
     <section class="menu">
         <div class="menu-text" id="catalog">
-            <h1>Our Menu</h1>
-            <p>Get the perfect meal with our most popular burger combinations.</p>
+            <h1>Explore Our Collection</h1>
+            <p>From luxurious beauty products to elegant home furniture, discover a wide range of carefully curated items that suit <br> every style and occasion. Our catalog is designed to inspire—find your next favorite piece today!</p>
         </div>
-        <div class="menu-container" id="menu-container">
-            <!-- Products will be inserted here -->
-        </div>
-        <script src="script.js"></script> <!-- Link to external JS file -->
+        <ul class="btn-container">
+        <a href="#all" class="btn-filter">All</a>
+        <a href="#beauty" class="btn-filter">Beauty</a>
+        <a href="#fragrances" class="btn-filter">Fragrances </a>
+        <a href="#groceries" class="btn-filter">Groceries</a>
+        <a href="#home-decoration"class="btn-filter">Decoration</a>
+        <a href="#kitchen-accessories"class="btn-filter">Kitchen</a>
+        </ul>
 
+        <div class="menu-container" id="menu-container">
+        </div>
     </section>
         <section class="cte">
             <div class="cte-image">
                 <img src="image/cte.png" alt="">
         </div>
             <div class="cte-text">
-                <h1>Order your Favorite<br>Burger Now!</h1>
-                    <p>Indulge in the juiciest, most flavorful burgers made fresh just for you. Whether you're craving something classic or bold, we've got the perfect bite waiting!</p>
-                    <a href="https://wa.me/6282132960752" class="button-cte">Click to Order!</a>
+                <h1>Transform Your World <br> with Beauty & Comfort</h1>
+                    <p>Ready to upgrade your look and your space? Shop our exclusive beauty, fragrance, and home collections today! Whether you're treating yourself or refreshing your home, we've got everything you need for a life filled with style and grace. Don’t wait—start shopping now!</p>
+                    <a href="https://wa.me/6282132960752" class="button-cte">Our Contact!</a>
             </div>
         </section> 
         <section id="gallery" class="instagram-post">
             <h1>INSTAGRAM POST</h1>
-            <p>Check out our burger creations! Follow us on Instagram for delicious shots, new menu items, and behind-the-scenes moments. #BurgerEat</p>
+            <p>Transform your space and your style all in one place! From luxurious furniture to must-have beauty essentials, we’ve got everything you need to feel confident and comfortable. ✨ Shop now for a life filled with beauty and comfort!</p>
             <div class="post-container">
                 <div class="post">
-                    <img src="/image/burger9.webp" alt="">
+                    <img src="/image/gallery1.png" alt="">
                 </div>
                 <div class="post">
-                    <img src="/image/org1.jpg" alt="">
+                    <img src="/image/gallery2.png"" alt="">
                 </div>
                 <div class="post">
-                    <img src="/image/org2.webp" alt="">
+                    <img src="/image/gallery3.png"" alt="">
                 </div>
             </div>
         </section>
         <section id="testimonials" class="customer-says">
-            <h1>CUSTOMER SAYS</h1>
-            <p>Discover what our customer love! Read their reviews on our delicious and popular burger creations.</p>
+            <h1>What Our Customers Are Saying</h1>
+            <p>Our customers love the way our products blend style, quality, and comfort. Hear what they have to say about their experiences!</p>
             <div class="reviews">
                 <div class="review-card">
                     <div class="rating">
                         <span class="stars">★★★★★</span>
                         <span class="rating-number">(5.0)</span>
                 </div>
-                    <p>"The Double Beef is amazing! The meat is thick, juicy, and perfectly seasoned. Worth every penny!</p>
+                    <p>"The makeup collection is phenomenal, and the fragrances are to die for! I also bought a sofa that’s both stylish and cozy—this store has everything I need in one place!</p>
                     <div class="reviewer-footer">
                         <p>-John A.</p>
-                        <img src="/image/burger5.png" alt=" ">
                     </div>
                 </div>
                 <div class="review-card">
@@ -112,10 +129,9 @@
                         <span class="stars">★★★★</span>
                         <span class="rating-number">(4.0)</span>
                 </div>
-                    <p>"The Chicken Burger is quite tasty, the chicken is flavorful, but the bun was a bit dry. Overall, still good!"</p>
+                    <p>"I never thought I’d find a store that caters to both my beauty and home needs, but Yours Need nailed it! Great quality and superb service <br> so happy!!"</p>
                     <div class="reviewer-footer">
                         <p>-Nina J.</p>
-                        <img src="/image/burger2.png" alt=" ">
                     </div>
                 </div>
                 <div class="review-card">
@@ -123,31 +139,33 @@
                         <span class="stars">★★★★★</span>
                         <span class="rating-number">(5.0)</span>
                 </div>
-                    <p>"The Fish Burger is crispy on the outside, soft on the inside. The pairing with tartar sauce is perfect!""</p>
+                    <p>"I’m so impressed with Yours Need! The furniture is not only stylish but also very comfortable. Plus, the makeup and fragrances are top-notch!"</p>
                     <div class="reviewer-footer">
                         <p>-Kevin P.</p>
-                        <img src="/image/burger7.png" alt=" ">
+
                     </div>
                 </div>
             </div>
         </section> 
+        
         <footer class="footer">
             <div class="footer-left">
-                <h2>BurgerEat</h2>
-                <p>Contact us: <a href="mailto:hello@burger.eat">hello@burger.eat</a></p>
-                <p>&copy; BurgerEat, 2024</p>
+                <h2>Your'sNeed</h2>
+                <p>Contact us: <a href="mailto:hello@yoursneed.com">hello@yoursneed.eat</a></p>
+                <p>&copy; YoursNeed, 2024</p>
             </div>
             <div class="footer-about">
-                <h3>About BurgerEat</h3>
+                <h3>About Your'sNeed</h3>
                 <ul>
                     <li><a href="#about">About</a></li>
-                    <li><a href="#catalog">Menu</a></li>
+                    <li><a href="#catalog">Catalog</a></li>
                     <li><a href="#gallery">Gallery</a></li>
                     <li><a href="#testimonials">Testimonials</a></li>
                 </ul>
             </div>
         </footer>
-
+                <!-- Cart Modal -->
+                    
     </section>
 
     <script>

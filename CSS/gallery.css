@@ -8,7 +8,7 @@ body {
 .instagram-post {
     text-align: center;
     padding: 20px 0;
-    margin-top: 150px;
+    margin-top: 100px;
 }
 
 .instagram-post h1 {
@@ -40,12 +40,20 @@ body {
     border-radius: 20px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
     max-width: 300px;
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+    transform-style: preserve-3d;
 }
 
 .post {
     flex: 1;
     max-width: 300px;
     height: auto;
+}
+
+/* Animasi unik saat di-hover */
+.post img:hover {
+    transform: rotateY(15deg) rotateZ(5deg); /* Efek kemiringan 3D */
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3); /* Menambah bayangan */
 }
 
 @media screen and (max-width: 768px) {
